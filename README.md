@@ -25,13 +25,13 @@ Welcome to Ali's eCommerce Portfolio website! This project is a simple yet respo
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone [https://github.com/yourusername/your-repo-name.git](https://efootballshop.github.io/Efootball.github.me/)
     ```
 2. Open the `index.html` file in your preferred web browser to view the website.
 
 ## Live Demo
 
-You can view the live demo of the website [here](https://your-live-demo-link.com).
+You can view the live demo of the website [here]([https://your-live-demo-link.com](https://efootballshop.github.io/Efootball.github.me/).
 
 ## Customization
 
