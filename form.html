@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #007bff;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #007bff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: yellow;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        a.previous-button {
+            text-decoration: none;
+            color: black;
+            background-color: yellow;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            form {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        
+        <button type="button" onclick="openEmailClient()">Send via Email</button>
+        <a href="efootball.html" class="previous-button">Previous</a>
+    </form>
+
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // ... (your form submission and validation logic)
+        });
+
+        function openEmailClient() {
+            const emailAddress = 'sidcalison@gmail.com';
+            const subject = 'Contact Form Submission';
+            const body = `Name: ${form.name.value}\nEmail: ${form.email.value}\nMessage: ${form.message.value}`;
+
+            const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
