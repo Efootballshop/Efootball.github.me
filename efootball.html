@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EFootball shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0000FF; /* Classic blue */
+            color: white;
+        }
+
+        header {
+            text-align: center;
+                    }
+
+        nav {
+            background-color: #0066ff; /* EFootball blue */
+            padding: 10px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            background-color: #FFD700; /* Dark yellow */
+        }
+
+        nav .active {
+            background-color: #444;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #0066ff;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #333;
+        }
+
+        #home, #about, #contact {
+            margin-bottom: 20px;
+        }
+
+        #about {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        #about h2 {
+            font-size: 24px;
+        }
+
+        #about p {
+            font-size: 16px;
+        }
+
+        #contact {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 24px;
+        }
+
+        #contact p {
+            font-size: 16px;
+        }
+
+        .element-to-style {
+            display: block;
+        }
+
+        .project {
+            background-color: #ffcc00; /* EFootball yellow */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            color: white;
+        }
+
+        .project img {
+            width: 100%;
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .popup-container img {
+            display: block;
+            margin: 40px auto;
+            max-width: 80%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <h1>EFootball shop</h1>
+    </header>    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="info.html">About</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="home">
+        <section class="project">
+            <img src="https://i.postimg.cc/85PMG989/Screenshot-20240731-123152-e-Football.jpg" alt="Project 1" class="popup-image">
+    for sale<h3>for sale</h3>
+   EFootball sale Account cheap low price price $38.9</p>
+        </section>
+        <section class="project">
+             <img src="https://i.postimg.cc/rmm034xL/Screenshot-20240731-123200-e-Football.jpg" alt="Project 2" class="popup-image">
+    for sale<h3>for sale</h3>
+   EFootball sale Account cheap low price price $38.9</p>
+        </section>
+        <section class="project">
+            <img src="https://i.postimg.cc/CKvHRS4S/Screenshot-20240731-124332-e-Football.jpg" alt="Project 3" class="popup-image">
+    for sale<h3>for sale</h3>
+   EFootball sale Account cheap low price price $38.9</p>
+        </section>
+        <section class="project">
+             <img src="https://i.postimg.cc/k5WfGkp5/Screenshot-20240731-123139-e-Football.jpg" alt="Project 4" class="popup-image">
+    for sale<h3>for sale</h3>
+   EFootball sale Account cheap low price price $38.9</p>
+        </section>
+            </section>         
+    </main>
+    <footer>
+        <h2>Contact</h2>
+        <p>Email: sidcalison@gmail.com</p>
+        <p>Phone: +252770729977</p>
+    </footer>
+
+    <div class="popup-container">
+        <span class="close-button">×</span>
+        <img class="popup-image-full" src="">
+    </div>
+
+    <script>
+        const popupContainer = document.querySelector('.popup-container');
+        const popupImage = document.querySelector('.popup-image-full');
+        const closeButton = document.querySelector('.close-button');
+
+        const images = document.querySelectorAll('.popup-image');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                popupImage.src = image.src;
+                popupContainer.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            popupContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
